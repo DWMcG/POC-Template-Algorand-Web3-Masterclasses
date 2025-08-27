@@ -1,0 +1,19 @@
+{
+  "credential_id": "EMP-2023-001",
+  "type": "employment",
+  "issuer_wallet": "ALGO-EMPLOYER-WALLET-XYZ",
+  "employee_wallet": "ALGO-EMPLOYEE-WALLET-ABC",
+  "employee_name": "Jane Doe",
+  "employee_id": "EMP123456",
+  "employer_name": "Tech Solutions Ltd.",
+  "role": "Software Engineer",
+  "start_date": "2023-01-15",
+  "end_date": null,
+  "status": "open",
+  "issue_date": "2023-01-10",
+  "reference_id": "REF7890",
+  "credential_proof": "https://example.com/proofs/EMP123456.pdf",
+  "notes": "Credential verified by HR department.",
+  "version": "1.1",
+  "image": "ipfs://bafkreidxyd3qhmwr4f2u5qzsp32vgr6htiwheiwzr5je4wxu2mhnwak6vu"
+}
