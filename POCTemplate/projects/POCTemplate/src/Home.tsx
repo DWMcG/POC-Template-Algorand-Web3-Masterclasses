@@ -6,6 +6,7 @@ import Transact from './components/Transact'
 import NFTmint from './components/NFTmint'
 import Tokenmint from './components/Tokenmint'
 import EmploymentForm from './components/credentials/EmploymentForm'
+import VerifyNFT from './components/VerifyNFT'
 
 interface HomeProps {}
 
@@ -14,6 +15,7 @@ const Home: React.FC<HomeProps> = () => {
   const [openPaymentModal, setOpenPaymentModal] = useState(false)
   const [openTokenModal, setOpenTokenModal] = useState(false)
   const [openEmploymentModal, setOpenEmploymentModal] = useState(false)
+  const [openVerifyModal, setOpenVerifyModal] = useState(false)
 
   const [generatedCredentials, setGeneratedCredentials] = useState<any[]>([])
 
@@ -130,17 +132,18 @@ const Home: React.FC<HomeProps> = () => {
               <div className="flex flex-col gap-4">
                 <button
                   className="w-full py-2 rounded-lg text-white"
-                  style={{ backgroundColor: '#00C48C' }}
+                  style={{ backgroundColor: '#1C2D5A' }}
                   onClick={() => setOpenEmploymentModal(true)}
                 >
                   create employment credential
                 </button>
                 <button
-                  className="w-full py-2 rounded-lg text-[#1C2D5A] border border-[#00C48C]"
-                  onClick={() => setOpenTokenModal(true)}
+                  className="w-full py-2 rounded-lg text-[#1C2D5A] border border-[#1C2D5A] bg-white"
+                  onClick={() => setOpenEmploymentModal(true)}
                 >
-                  Create Token (ASA)
-                </button>
+                  create education credential
+                  </button>
+
               </div>
             </div>
 
@@ -151,16 +154,11 @@ const Home: React.FC<HomeProps> = () => {
                 <button
                   className="w-full py-2 rounded-lg text-white"
                   style={{ backgroundColor: '#00C48C' }}
-                  onClick={handleVerifyCredential}
+                  onClick={() => setOpenVerifyModal(true)}
                 >
                   Verify Credential
                 </button>
-                <button
-                  className="w-full py-2 rounded-lg text-[#1C2D5A] border border-[#00C48C]"
-                  onClick={() => setOpenTokenModal(true)}
-                >
-                  Create Token (ASA)
-                </button>
+                
               </div>
             </div>
           </div>
@@ -175,6 +173,10 @@ const Home: React.FC<HomeProps> = () => {
         credentialJSON={generatedCredentials[generatedCredentials.length - 1]}
       />
       <Tokenmint openModal={openTokenModal} setModalState={setOpenTokenModal} />
+      <VerifyNFT
+        openModal={openVerifyModal}
+        setModalState={setOpenVerifyModal}
+      />
 
       {openEmploymentModal && (
         <dialog id="employment_modal" className="modal modal-open bg-slate-200">
