@@ -16,7 +16,9 @@ const VerifyNFT: React.FC<VerifyNFTProps> = ({ openModal, setModalState }) => {
     try {
       const algorand = AlgorandClient.testNet() // Or mainNet() later
       const assetInfo = await algorand.client.algod.getAssetByID(Number(assetId)).do()
-      enqueueSnackbar(`✅ Verified! Asset Name: ${assetInfo.params.name}`, { variant: 'success' })
+
+      // ✅ Only check existence on-chain
+      enqueueSnackbar(`✅ Asset exists! Asset Name: ${assetInfo.params.name}`, { variant: 'success' })
       setModalState(false)
     } catch (err) {
       enqueueSnackbar('❌ Asset not found or invalid ID', { variant: 'error' })
