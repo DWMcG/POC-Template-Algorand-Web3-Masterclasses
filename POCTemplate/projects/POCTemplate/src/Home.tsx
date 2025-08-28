@@ -131,8 +131,7 @@ const Home: React.FC<HomeProps> = () => {
               <p className="text-gray-600 mb-6">Create education and employment credentials.</p>
               <div className="flex flex-col gap-4">
                 <button
-                  className="w-full py-2 rounded-lg text-white"
-                  style={{ backgroundColor: '#1C2D5A' }}
+                  className="w-full py-2 rounded-lg text-[#1C2D5A] border border-[#1C2D5A] bg-white"
                   onClick={() => setOpenEmploymentModal(true)}
                 >
                   create employment credential
@@ -156,7 +155,7 @@ const Home: React.FC<HomeProps> = () => {
                   style={{ backgroundColor: '#00C48C' }}
                   onClick={() => setOpenVerifyModal(true)}
                 >
-                  Verify Credential
+                  verify credential
                 </button>
                 
               </div>
