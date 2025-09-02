@@ -115,7 +115,7 @@ const Home: React.FC<HomeProps> = () => {
         <div className="bg-white shadow-xl rounded-2xl p-8 text-center w-full max-w-md border border-gray-200 mb-6">
           <h2 className="text-xl font-semibold text-[#1C2D5A]">verifyHR</h2>
           <p className="text-gray-600 mb-6">Issue and verify credentials with ease.</p>
-           <p className="text-gray-600 mb-6">Test.</p>
+          
           <button
             className="w-full py-2 rounded-lg text-white"
             style={{ backgroundColor: '#1C2D5A' }}
